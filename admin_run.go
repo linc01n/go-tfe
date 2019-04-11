@@ -24,8 +24,9 @@ type adminRuns struct {
 //AdminRunListOptions represents the options for listing runs.
 type AdminRunListOptions struct {
 	ListOptions
-	Q      *string   `url:"q,omitempty"`
-	Status RunStatus `url:"filter[status],omitempty"`
+	Q       *string   `url:"q,omitempty"`
+	Status  RunStatus `url:"filter[status],omitempty"`
+	Include *string   `url:"include,omitempty"`
 }
 
 // List all runs in the Terraform Enterprise installation.
